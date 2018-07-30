@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups xmlns="http://www.isdc.ro/wro"  
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+         xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">  
+   
+   <!-- CSS resources -->  
+   <group name="bundledCss">  
+         <css minimize="false">/webjars/bootstrap/3.3.6/css/bootstrap.min.css</css>
+        <css>/webjars/angular-responsive-tables/0.4.4/release/angular-responsive-tables.css</css>
+        <css>/webjars/ng-table/1.0.0/dist/ng-table.css</css>
+   </group>  
+
+   
+   <!-- JS resources -->  
+   <group name="bundledLibJs">  
+        <js minimize="false">/webjars/angularjs/1.5.5/angular.min.js</js>
+        <js minimize="false">/webjars/angularjs/1.5.5/angular-resource.min.js</js>
+        <js minimize="false">/webjars/angularjs/1.5.5/angular-route.min.js</js>
+        <js minimize="false">/webjars/angularjs/1.5.5/angular-messages.min.js</js>
+        <js minimize="false">/webjars/angularjs/1.5.5/angular-sanitize.min.js</js>
+        <js minimize="false">/webjars/angular-ui-router/0.3.2/release/angular-ui-router.min.js</js>
+        <js minimize="false">/webjars/ng-table/1.0.0/dist/ng-table.min.js</js>
+        <js minimize="false">/webjars/angular-responsive-tables/0.4.4/release/angular-responsive-tables.min.js</js>
+   </group>  
+   
+   <group name="bundledAppJs">   
+        <js>/resources/js/**.js</js>
+   </group> 
+ </groups>
+ 

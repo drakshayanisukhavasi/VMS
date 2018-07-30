@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row" ui-view>
+        
+    </div>
+    <div class="row" ng-hide="hideAddVehicle">
+        <div class="col-md-8">
+            <input class="form-control" type="text" ng-model="filter" ng-change="search()" />
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-primary pull-right" ng-click="changeTo('add')">Add Vehicle</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="container">
+            <table wt-responsive-table ng-table="vehiclesTable" show-filter="false" class="table table-striped table-bordered results-table">
+            <thead>
+                <tr>
+                    <th>Vehicle Type</th>
+                    <th>Reg. Number</th>
+                    <th>Capacity</th>
+                    <th style="width: 15%"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="vehicle in $data">
+                    <td ng-bind="vehicle.type" class="text-center"></td>
+                    <td ng-bind="vehicle.regNo" class="text-center"></td>
+                    <td ng-bind="vehicle.capacity" class="text-center"></td>
+                    <td>
+                        <button class="btn btn-primary" type="button" ng-click="changeTo('edit', vehicle)">Edit</button>
+                        <button class="btn btn-danger" type="button" ng-click="deleteVehicle(vehicle)">Delete</button>
+                    </td>
+                </tr>
+                <tr ng-if="$data.length == 0">
+                    <td colspan="4" class="text-center">No Vehicles found</td>
+                </tr>
+            </tbody>
+        </div>
+    </div>
+</div>
